@@ -10,7 +10,7 @@ public class Translator {
         }
     }
 
-    private String translate(Integer number) {
+    public String translate(Integer number) {
         return numericAlpha.get(number);
     }
 }

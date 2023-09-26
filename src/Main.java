@@ -8,7 +8,7 @@ public class Main {
         Translator translator = new Translator(numeric, alpabetic);
 
         boolean play = true;
-        String ongeldig = "Invoer is ongeldig, voer een waarde in van 0 t/m 9";
+        String ongeldig = "Invoer is ongeldig";
 
         Scanner scanner = new Scanner(System.in);
 
@@ -24,18 +24,14 @@ public class Main {
                 int number = scanner.nextInt();
                 scanner.nextLine();
                 if (number < 10 && number >= 0) {
-
+                    String result = translator.translate(number);
+                    System.out.println("De vertaling van " + number + " is " + result);
+                } else {
+                    System.out.println(ongeldig);
                 }
+            } else {
+                System.out.println(ongeldig);
             }
-
         }
-
-
-
-
-
-
-
-
     }
 }
