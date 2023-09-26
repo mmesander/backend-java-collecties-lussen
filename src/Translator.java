@@ -4,9 +4,13 @@ import java.util.Map;
 public class Translator {
     Map<Integer, String> numericAlpha = new HashMap<>();
 
-    public Translator(String[] alphabetic, Integer[] numeric) {
+    public Translator(Integer[] numeric, String[] alphabetic) {
         for (int i = 0; i < numeric.length; i++) {
             numericAlpha.put(numeric[i], alphabetic[i]);
         }
+    }
+
+    private String translate(Integer number) {
+        return numericAlpha.get(number);
     }
 }
