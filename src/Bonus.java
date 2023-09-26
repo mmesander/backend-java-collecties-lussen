@@ -11,25 +11,18 @@ public class Bonus {
                 System.out.println(stringnumber);
                 feedback(stringnumber);
         }
-
-
-
-
-
-        String stringnumber = setToStringConverter(secretnumber);
-        System.out.println(stringnumber);
-        feedback(stringnumber);
-
     }
 
     public static HashSet<Integer> randomnumbergenerator(){
         Random randomNumber = new Random();
         HashSet<Integer> secretNumbers = new HashSet<>();
         while (secretNumbers.size() < 4) {
-            int secretNumber = randomNumber.nextInt(10);
+            int secretNumber = randomNumber.nextInt(9) + 1;
             secretNumbers.add(secretNumber);
+            System.out.println(secretNumbers);
         }
         return secretNumbers;
+
     }
 
     public static String setToStringConverter(HashSet<Integer> secretnumbers) {
